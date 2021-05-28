@@ -1,0 +1,35 @@
+landscape: Pizza place
+    system: Pizza ordering system
+        description: Provides functionality for customers and employees to see and maintain the pizza menu and to place and handle orders
+        container: Web application
+            description: Provides customers with access to the pizza menu and the ability to place orders
+            tech: ASP.NET
+        container: Mobile application
+            description: Provides customers with access to the pizza menu and the ability to place orders
+            tech: Xamarin
+        container: Windows application
+            description: Provides backoffice functionality for employees
+            tech: WinForms/.NET Framework
+        container: API application
+            description:
+            tech: .NET Core
+        container: Database
+            description: Holds user accounts, orders and menu items
+            tech: SQL server
+            icon: database
+        relations:
+            Web app -> API app: Retrieve menu and deliver orders using [REST/HTTP]
+            Mobile app -> API app: Retrieve menu and deliver orders using [REST/HTTP]
+            Win app -> Database: Reads and writes the menu and updates orders using [SQL]
+            API app -> Database: Read menu and writes orders using [SQL]
+    external-system: Email service
+        description: Email sending service. Styles contents in a consistent way and handles sender not being treated as spam.
+    person: Customer
+        description: A very hungry person
+    person: Pizza chef
+        description: Employee who takes the orders and cooks the pizza
+    relations:
+        Customer -> Pizza ordering system/Web application: Views menu and orders pizza using
+        Customer -> Pizza ordering system/Mobile application: Views menu and orders pizza using
+        Pizza chef -> Pizza ordering system/Windoes application: Updates menu and handles orders using
+        Pizza ordersing system/API application -> Email service: Sends order confirmation emails using [REST/HTTP]
