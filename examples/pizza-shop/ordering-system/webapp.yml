@@ -4,5 +4,5 @@ description: Provides customers with access to the pizza menu and the ability to
 tech: ASP.NET
 relations:
   - target: webapp
-    comment: Retrieve menu and deliver orders using
+    description: Retrieve menu and deliver orders using
     tech: REST/HTTP
