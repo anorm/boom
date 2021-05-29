@@ -1,0 +1,11 @@
+type: container
+name: API application
+description:
+tech: .NET Core
+relations:
+  - target: database
+    comment: Read menu and writes orders using
+    tech: SQL
+  - target: ../email-service
+    description: Sends order confirmation emails using
+    tech: REST/HTTP

@@ -1,0 +1,8 @@
+type: container
+name: Windows application
+description: Provides backoffice functionality for employees
+tech: WinForms/.NET Framework
+relations:
+  - target: database
+    description: Reads and writes the menu and updates orders using
+    tech: SQL

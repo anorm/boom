@@ -1,0 +1,8 @@
+type: person
+name: Customer
+description: A very hungry person
+relations:
+  - target: ordering-system/webapp
+    description: Views menu and orders pizza using
+  - target: ordering-system/mobileapp
+    description: Views menu and orders pizza using

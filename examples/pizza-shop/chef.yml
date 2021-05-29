@@ -1,0 +1,7 @@
+type: person
+name: Pizza chef
+description: Employee who takes the orders and cooks the pizza
+relations:
+  - target: ordering-system/winapp
+    description: Updates menu and handles orders using
+

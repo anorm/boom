@@ -1,0 +1,8 @@
+type: container
+name: Mobile application
+description: Provides customers with access to the pizza menu and the ability to place orders
+tech: Xamarin
+relations:
+  - target: mobileapp
+    description: Retrieve menu and deliver orders using
+    tech: REST/HTTP

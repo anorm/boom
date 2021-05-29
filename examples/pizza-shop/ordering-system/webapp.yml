@@ -1,0 +1,8 @@
+type: container
+name: Web application
+description: Provides customers with access to the pizza menu and the ability to place orders
+tech: ASP.NET
+relations:
+  - target: webapp
+    comment: Retrieve menu and deliver orders using
+    tech: REST/HTTP

@@ -1,0 +1,3 @@
+type: system
+name: Pizza ordering system
+description: Provides functionality for customers and employees to see and maintain the pizza menu and to place and handle orders
