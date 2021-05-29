@@ -5,6 +5,7 @@ import (
 	"gopkg.in/yaml.v3"
 	"log"
 	"os"
+    "strings"
 )
 
 type Entity struct {
@@ -13,12 +14,20 @@ type Entity struct {
 	Description string
 	Tech        string
 	Shape       string
-	Relations   struct {
+	Relations   []struct {
 		Source      string
 		Target      string
 		Description string
 		Tech        string
 	}
+    children []Entity
+}
+
+func fileNameWithoutExtension(fileName string) string {
+	if pos := strings.LastIndexByte(fileName, '.'); pos != -1 {
+		return fileName[:pos]
+	}
+	return fileName
 }
 
 func main() {
