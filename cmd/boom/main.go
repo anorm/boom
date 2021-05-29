@@ -11,7 +11,14 @@ type Entity struct {
 	Type        string
 	Name        string
 	Description string
+	Tech        string
 	Shape       string
+	Relations   struct {
+		Source      string
+		Target      string
+		Description string
+		Tech        string
+	}
 }
 
 func main() {
